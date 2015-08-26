@@ -3,10 +3,8 @@
 ---
 @charset "utf-8";
 
-
-
 // Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
@@ -15,7 +13,7 @@ $spacing-unit:     30px;
 
 $text-color:       #111;
 $background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+$brand-color     : #aa00ff;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
@@ -42,11 +40,195 @@ $on-laptop:        800px;
     }
 }
 
-
-
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
         "base",
         "layout",
         "syntax-highlighting"
 ;
+
+$color-brand: #e74c3c;
+
+html,
+body {
+	height          : 100%;
+}
+
+body {
+	font-family     : $base-font-family;
+	font-weight     : 400;
+}
+
+.navbar-default {
+	background-color: #fff;
+}
+
+.navbar-brand-img-inverse {
+	-webkit-transition: opacity .35s;
+	   -moz-transition: opacity .35s;
+	   		transition: opacity .35s;
+}
+
+.navbar-default .nav > li > a {
+	-webkit-transition: color .35s;
+	   -moz-transition: color .35s;
+	   		transition: color .35s;
+}
+
+.navbar-default .nav > li > a,
+.navbar-default .nav > li > a:focus {
+	font-size       : 14px;
+	font-weight     : 700;
+	text-transform  : uppercase;
+	color           : #2c3e50;
+}
+
+.navbar-default .nav > li > a:hover,
+.navbar-default .nav > li > a:focus:hover {
+	color           : $color-brand;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: $color-brand;
+}
+
+@media(min-width: 768px) {
+	.navbar-default {
+		background-color: transparent;
+		border-color    : transparent;
+	}
+
+	.navbar-brand-img-inverse {
+		padding-top     : 10px;
+		padding-bottom  : 10px;
+		opacity         : 0.84;
+	}
+
+	.navbar-brand-img-inverse:hover,
+	.navbar-brand-img-inverse:focus {
+		opacity         : 1;
+	}
+
+	.navbar-default .nav {
+		padding-top     : 7px;
+	}
+
+	.navbar-default .nav > li > a,
+	.navbar-default .nav > li > a:focus {
+		color           : rgba(255,255,255,.84);
+	}
+
+	.navbar-default .nav > li > a,
+	.navbar-default .nav > li > a:focus {
+		color           : rgba(255,255,255,.84);
+	}
+
+	.navbar-default .nav > li > a:hover,
+	.navbar-default .nav > li > a:focus:hover {
+		color           : #fff;
+	}
+}
+
+.jumbotron-landing {
+	display         : flex;
+	align-items     : center;
+	width           : 100%;
+	height          : 100%;
+	min-height      : 100%;
+	min-height      : 100vh;
+	font-weight     : 300;
+	color           : #fff;
+	background-color: $color-brand;
+	background-image: -webkit-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+  	background-image:    -moz-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+  	background-image:     -ms-repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+  	background-image:         repeating-radial-gradient(center center, rgba(0,0,0,.2), rgba(0,0,0,.2) 1px, transparent 1px, transparent 100%);
+	-webkit-background-size: 3.5px 3.5px;
+  	   -moz-background-size: 3.5px 3.5px;
+            background-size: 3.5px 3.5px;
+	
+}
+
+.jumbotron-landing h1 {
+	text-shadow     : 0px 0px 5px rgba(255,255,255,0.7);
+}
+
+.blinking-underscore {
+  -webkit-animation: 1s blink step-end infinite;
+     -moz-animation: 1s blink step-end infinite;
+      -ms-animation: 1s blink step-end infinite;
+       -o-animation: 1s blink step-end infinite;
+          animation: 1s blink step-end infinite;
+}
+
+@keyframes blink {
+    0%  {
+    	color       : transparent;
+    	text-shadow : none;
+   	}
+    50% {
+    	color       : #fff;
+    	text-shadow : 0px 0px 5px rgba(255,255,255,0.7);
+    }
+}
+
+@-moz-keyframes blink {
+    0%  {
+    	color       : transparent;
+    	text-shadow : none;
+   	}
+    50% {
+    	color       : #fff;
+    	text-shadow : 0px 0px 5px rgba(255,255,255,0.7);
+    }
+}
+
+@-webkit-keyframes blink {
+    0%  {
+    	color       : transparent;
+    	text-shadow : none;
+   	}
+    50% {
+    	color       : #fff;
+    	text-shadow : 0px 0px 5px rgba(255,255,255,0.7);
+    }
+}
+
+@-ms-keyframes blink {
+    0%  {
+    	color       : transparent;
+    	text-shadow : none;
+   	}
+    50% {
+    	color       : #fff;
+    	text-shadow : 0px 0px 5px rgba(255,255,255,0.7);
+    }
+}
+
+@-o-keyframes blink {
+    0%  {
+    	color       : transparent;
+    	text-shadow : none;
+   	}
+    50% {
+    	color       : #fff;
+    	text-shadow : 0px 0px 5px rgba(255,255,255,0.7);
+    }
+}
+
+footer {
+	color           : #fff;
+	background-color: #2b2d2e;
+}
+
+footer .container-fluid {
+	margin     : 0 !important;
+	padding    : 0 !important;
+}
+
+.container-copyright {
+	padding    		: 20px;
+	font-size  		: 11px;
+	letter-spacing  : 0.5px;
+	background-color: #10100E;
+}
