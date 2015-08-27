@@ -1,53 +1,8 @@
 ---
 
 ---
-@charset "utf-8";
-
-// Our variables
-$base-font-family: 'Open Sans', Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
-
-$spacing-unit:     30px;
-
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color     : #aa00ff;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-// Width of the content area
-$content-width:    800px;
-
-$on-palm:          600px;
-$on-laptop:        800px;
-
-
-
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
-}
-
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "layout",
-        "syntax-highlighting"
-;
-
-$color-brand: #e74c3c;
+$default-font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+$color-brand        : #e74c3c;
 
 html,
 body {
@@ -55,7 +10,7 @@ body {
 }
 
 body {
-	font-family     : $base-font-family;
+	font-family     : $default-font-family;
 	font-weight     : 400;
 }
 
@@ -98,6 +53,10 @@ body {
 		border-color    : transparent;
 	}
 
+	.navbar-brand {
+		padding        : 0px;
+	}
+
 	.navbar-brand-img-inverse {
 		padding-top     : 10px;
 		padding-bottom  : 10px;
@@ -110,7 +69,7 @@ body {
 	}
 
 	.navbar-default .nav {
-		padding-top     : 7px;
+		padding-top     : 10px;
 	}
 
 	.navbar-default .nav > li > a,
@@ -147,6 +106,12 @@ body {
   	   -moz-background-size: 3.5px 3.5px;
             background-size: 3.5px 3.5px;
 	
+}
+
+.jumbotron-landing h1,
+.jumbotron-landing h2,
+.jumbotron-landing h3 {
+	font-weight     : 300;
 }
 
 .jumbotron-landing h1 {
