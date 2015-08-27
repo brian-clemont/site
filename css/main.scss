@@ -1,7 +1,6 @@
 ---
 
 ---
-$default-font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 $color-brand        : #e74c3c;
 
 html,
@@ -10,7 +9,7 @@ body {
 }
 
 body {
-	font-family     : $default-font-family;
+	font-family     : 'Open Sans';
 	font-weight     : 400;
 }
 
