@@ -113,6 +113,20 @@ body {
 	font-weight     : 300;
 }
 
+@media(min-width: 768px) {
+	.jumbotron-landing .container h1 {
+		font-size       : 32px;
+	}
+	
+	.jumbotron-landing .container h2 {
+		font-size       : 26px;
+	}
+	
+	.jumbotron-landing .container h3 {
+		font-size       : 20px;
+	}
+}
+
 .jumbotron-landing .container h1 {
 	text-shadow     : 0px 0px 5px rgba(255,255,255,0.7);
 }
